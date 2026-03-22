@@ -83,15 +83,24 @@ const styles = StyleSheet.create({
         padding: 15,
         borderRadius: 8,
         marginBottom: 15,
-        color: '#FFFFFF'
+        color: '#FFFFFF',
+        shadowColor: '#E50914',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.5,
+        shadowRadius: 4,
+        elevation: 3
     },
 
     button: {
         backgroundColor: '#E50914',
-        padding: 15,
+        padding: 20, // antes 15
         borderRadius: 8,
         alignItems: 'center',
-        marginTop: 10
+        marginTop: 10,
+        shadowColor: '#FF0000', // sombra roja
+        shadowOpacity: 0.5,
+        shadowRadius: 8,
+        elevation: 5
     },
 
     buttonText: {

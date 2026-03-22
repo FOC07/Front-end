@@ -9,7 +9,7 @@ const HomeScreen = ({ goToDashboard, goToTasks }) => {
     return (
         <View style={styles.container}>
 
-            <Text style={styles.title}>Bienvenido 👋</Text>
+            <Text style={styles.title}>Bienvenido a tu app de tareas🚀</Text>
 
             <TouchableOpacity style={styles.card} onPress={goToDashboard}>
                 <Text style={styles.icon}>👤</Text>
@@ -56,7 +56,8 @@ const styles = StyleSheet.create({
         marginTop: 20,
         backgroundColor: 'red',
         padding: 10,
-        borderRadius: 8
+        borderRadius: 8,
+        fontSize: 16
     }
 });
 

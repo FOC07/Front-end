@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { View,Text,FlatList,TouchableOpacity,ActivityIndicator,StyleSheet,TextInput,Modal,Alert,RefreshControl
+import {
+    View, Text, FlatList, TouchableOpacity, ActivityIndicator, StyleSheet, TextInput, Modal, Alert, RefreshControl
 } from 'react-native';
 
 import { AuthContext } from '../context/authContext';
@@ -144,17 +145,19 @@ const TaskScreen = ({ goBack }) => {
                 renderItem={({ item }) => (
                     <View style={styles.card}>
 
-                        <Text style={styles.taskTitle}>{item.titulo}</Text>
+                        <Text style={styles.taskTitle}>📌 {item.titulo}</Text>
                         <Text style={styles.taskDesc}>{item.descripcion}</Text>
 
                         <View style={styles.actions}>
+
                             <TouchableOpacity onPress={() => handleEdit(item)}>
-                                <Text>Editar</Text>
+                                <Text style={styles.edit}>Editar</Text>
                             </TouchableOpacity>
 
                             <TouchableOpacity onPress={() => handleDelete(item.id)}>
-                                <Text>Eliminar</Text>
+                                <Text style={styles.delete}>Eliminar</Text>
                             </TouchableOpacity>
+
                         </View>
 
                     </View>
@@ -276,14 +279,22 @@ const styles = StyleSheet.create({
 
     // ✏️ EDITAR
     edit: {
+        backgroundColor: '#333333',
         color: '#FFFFFF',
-        fontWeight: '600'
+        fontWeight: '600',
+        paddingHorizontal: 10,
+        paddingVertical: 5,
+        borderRadius: 5
     },
 
     // 🗑️ ELIMINAR
     delete: {
-        color: '#E50914',
-        fontWeight: '700'
+        backgroundColor: '#E50914',
+        color: '#FFFFFF',
+        fontWeight: '700',
+        paddingHorizontal: 10,
+        paddingVertical: 5,
+        borderRadius: 5
     },
 
     // 🔴 BOTÓN FLOTANTE
