@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { View,Text,FlatList,TouchableOpacity,ActivityIndicator,StyleSheet,TextInput,Modal,Alert,RefreshControl
+import {
+    View, Text, FlatList, TouchableOpacity, ActivityIndicator, StyleSheet, TextInput, Modal, Alert, RefreshControl
 } from 'react-native';
 
 import { AuthContext } from '../context/authContext';
@@ -148,13 +149,15 @@ const TaskScreen = ({ goBack }) => {
                         <Text style={styles.taskDesc}>{item.descripcion}</Text>
 
                         <View style={styles.actions}>
+
                             <TouchableOpacity onPress={() => handleEdit(item)}>
-                                <Text>Editar</Text>
+                                <Text style={styles.edit}>Editar</Text>
                             </TouchableOpacity>
 
                             <TouchableOpacity onPress={() => handleDelete(item.id)}>
-                                <Text>Eliminar</Text>
+                                <Text style={styles.delete}>Eliminar</Text>
                             </TouchableOpacity>
+
                         </View>
 
                     </View>
