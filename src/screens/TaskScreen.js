@@ -145,7 +145,7 @@ const TaskScreen = ({ goBack }) => {
                 renderItem={({ item }) => (
                     <View style={styles.card}>
 
-                        <Text style={styles.taskTitle}>{item.titulo}</Text>
+                        <Text style={styles.taskTitle}>📌 {item.titulo}</Text>
                         <Text style={styles.taskDesc}>{item.descripcion}</Text>
 
                         <View style={styles.actions}>
