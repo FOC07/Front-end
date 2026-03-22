@@ -9,7 +9,7 @@ const HomeScreen = ({ goToDashboard, goToTasks }) => {
     return (
         <View style={styles.container}>
 
-            <Text style={styles.title}>Bienvenido 👋</Text>
+           <Text style={styles.title}>Bienvenido a tu app de tareas🚀</Text>
 
             <TouchableOpacity style={styles.card} onPress={goToDashboard}>
                 <Text style={styles.icon}>👤</Text>
