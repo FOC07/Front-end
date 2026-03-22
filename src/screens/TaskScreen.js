@@ -279,14 +279,22 @@ const styles = StyleSheet.create({
 
     // ✏️ EDITAR
     edit: {
+        backgroundColor: '#333333',
         color: '#FFFFFF',
-        fontWeight: '600'
+        fontWeight: '600',
+        paddingHorizontal: 10,
+        paddingVertical: 5,
+        borderRadius: 5
     },
 
     // 🗑️ ELIMINAR
     delete: {
-        color: '#E50914',
-        fontWeight: '700'
+        backgroundColor: '#E50914',
+        color: '#FFFFFF',
+        fontWeight: '700',
+        paddingHorizontal: 10,
+        paddingVertical: 5,
+        borderRadius: 5
     },
 
     // 🔴 BOTÓN FLOTANTE
